@@ -56,7 +56,7 @@ workflows:
           base-revision: << pipeline.git.base_revision >>
           config-path: .circleci/continue-workflows.yml
           mapping: |
-            (Core/.*|Example/.*|Generated/.*|ApertureSDK.*) updated-sdk true
+            (Core/.*|Example/.*|Generated/.*|ApertureSDK.*|README,*) updated-sdk true
 
   filter-paths-pr:
     when:

@@ -6,7 +6,7 @@ orbs:
 parameters:
   updated-sdk:
     type: boolean
-    default: false
+    default: true
 
 jobs:
   release:

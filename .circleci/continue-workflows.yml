@@ -31,7 +31,6 @@ workflows:
   publish-release:
     when:
       or:
-        - equal: [main, << pipeline.git.branch >>]
         - << pipeline.parameters.updated-sdk >>
     jobs:
       - publish-release:

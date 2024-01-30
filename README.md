@@ -20,7 +20,7 @@
 
 # Rate Limiting for C# Applications
 
-The `aperture-csharp` SDK provides an easy way to integrate your .NET
+The `aperture-c#` SDK provides an easy way to integrate your .NET
 applications with [FluxNinja Aperture](https://github.com/fluxninja/aperture).
 It allows flow control functionality on fine-grained features inside service
 code.

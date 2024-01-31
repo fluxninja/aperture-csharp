@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <PackageId>ApertureSDK</PackageId>
-        <Version>2.23.1</Version>
+        <Version>2.24.1</Version>
         <Authors>FluxNinja Team</Authors>
         <Company>FluxNinja</Company>
         <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>

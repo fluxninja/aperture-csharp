@@ -34,7 +34,7 @@ Refer [documentation](https://docs.fluxninja.com/sdk/dotnet/) for more details.
 Run the command below to install the SDK:
 
 ```bash
-dotnet add package ApertureSDK --version 2.23.1
+dotnet add package ApertureSDK --version 2.24.1
 ```
 
 ### Create Aperture Client

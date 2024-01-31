@@ -28,15 +28,6 @@ jobs:
           name: "Publish Application"
           command: dotnet.exe nuget push C:\Users\circleci\project\bin\Debug\ApertureSDK* --api-key %NUGET_API_TOKEN% --source https://api.nuget.org/v3/index.json
 
-  say-hello:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
-
 workflows:
   version: 2
   filter-paths-main:

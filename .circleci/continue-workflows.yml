@@ -31,5 +31,5 @@ workflows:
   publish-release:
     when: << pipeline.parameters.updated-sdk >>
     jobs:
-      - publish-release:
+      - release:
           name: verify-publish-release

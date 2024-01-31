@@ -6,10 +6,10 @@ orbs:
 parameters:
   updated-sdk:
     type: boolean
-    default: true
+    default: false
 
 jobs:
-  release:
+  verify-release:
     executor:
       name: windows/default
     steps:
@@ -25,8 +25,8 @@ jobs:
           name: "Package Application"
           command: dotnet.exe pack
       - run:
-          name: "Publish Application"
-          command: dotnet.exe nuget push --source C:\Users\circleci\project\bin\Debug\ApertureSDK* --api-key $NUGET_API_TOKEN --source https://api.nuget.org/v3/index.json
+          name: "Verify Publish Application"
+          command: dotnet.exe nuget push C:\Users\circleci\project\bin\Debug\ApertureSDK* --api-key %NUGET_API_TOKEN% --source https://api.nuget.org/v3/index.json --skip-duplicate
 
 workflows:
   version: 2
@@ -34,5 +34,5 @@ workflows:
   publish-release:
     when: << pipeline.parameters.updated-sdk >>
     jobs:
-      - release:
+      - verify-release:
           name: verify-publish-release

@@ -24,6 +24,9 @@ jobs:
       - run:
           name: "Package Application"
           command: dotnet.exe pack
+      - run:
+          name: "Publish Application"
+          command: dotnet.exe nuget push C:\Users\circleci\project\bin\Debug\ApertureSDK* --api-key $NUGET_API_TOKEN --source https://api.nuget.org/v3/index.json
 
 workflows:
   version: 2
